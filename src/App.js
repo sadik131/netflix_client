@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import {  Route, Routes } from 'react-router-dom';
+import Home from './Component/Home';
+import Nav from './Component/Nav';
 import './App.css';
+import Artical from './Component/Artical';
+import Primian_artical from './Component/Primian_artical';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    <Nav></Nav>
+    <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
+      <Route path='/artical' element={<Artical></Artical>}></Route>
+      <Route path='/primiam' element={<Primian_artical></Primian_artical>}></Route>
+    </Routes>
+  </div>
   );
 }
 
